@@ -1,0 +1,29 @@
+<!-- Full synopsis -->
+<!-- Link to IMDB -->
+<!-- Link to Get Tickets / imdb.com/showtimes/title/{{id}}    Showtimes if I can find them -->
+<!-- Watch Trailer -->
+
+<div class="movie">
+
+  <div class="movie--details">
+
+    <div class="movie--rating critics">
+      {{this.ratings.critics_score}}
+    </div>
+    <div class="movie--rating audience">
+      {{this.ratings.critics_score}}
+    </div>
+
+    <div class="movie--info">
+      <h3 class="movie--title">{{this.title}}</h3>
+      <div class="movie--synopsis">{{this.synopsis}}</div>
+    </div>
+
+  </div>
+
+  <div class="movie--options">
+    <a href="#" class="button js-viewed" data-id="{{this.id}}">Seen It</a>
+    <a href="#" class="button js-ignore" data-id="{{this.id}}">Not Interested</a>
+  </div>
+
+</div>

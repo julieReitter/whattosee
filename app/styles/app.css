@@ -1,0 +1,145 @@
+#trailer-container, .trailer-close {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #eeeeee;
+  font-family: 'Arial', sans-serif;
+  font-size: 100%; }
+
+h1 {
+  font-size: 150%; }
+
+h3 {
+  font-size: 105%;
+  font-weight: bold; }
+
+#site-header {
+  background: #1e2427;
+  padding: 15px;
+  text-align: center;
+  color: white; }
+
+#trailer-container {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7); }
+  #trailer-container iframe {
+    margin: 10% auto; }
+
+.trailer-close {
+  display: block; }
+
+.trailer-wrapper {
+  width: 560px;
+  height: 315px;
+  margin: 10% auto; }
+
+.movie-list {
+  width: 1250px;
+  margin: 0 auto; }
+
+.movie {
+  background-color: white;
+  margin: 0 15px 15px 0;
+  float: left;
+  width: 400px;
+  height: 530px;
+  border-radius: 3px;
+  position: relative; }
+
+.movie--image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 3px 3px 0 0; }
+  .movie--image a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+  .movie--image img {
+    width: 100%; }
+
+.movie--details {
+  padding: 15px;
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px; }
+
+.movie--rating {
+  width: 50px;
+  height: 50px;
+  background: #7ef68c;
+  color: white;
+  font-weight: bold;
+  font-size: 120%;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 16px;
+  margin-right: 10px; }
+  .movie--rating.audience {
+    display: none; }
+
+.movie-rating--audience {
+  display: none;
+  font-size: 105%;
+  color: rgba(255, 255, 255, 0.4); }
+
+.movie--info {
+  display: inline-block;
+  vertical-align: middle; }
+
+.movie--snippet {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #aaa;
+  width: 305px;
+  font-size: 75%;
+  margin-top: 7px;
+  line-height: 1.5em; }
+
+.movie--extra-btn {
+  position: absolute;
+  top: 17px;
+  right: 24px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  text-decoration: none; }
+
+.movie--options {
+  background: #353e43;
+  color: white;
+  border-radius: 0 0 3px 3px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+  .movie--options .button {
+    padding: 17px;
+    display: inline-block;
+    width: 49.5%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 85%; }
+    .movie--options .button:first-child {
+      border-right: solid 1px black; }
+    .movie--options .button:hover {
+      color: white; }
+
+.movie--synopsis {
+  display: none; }
