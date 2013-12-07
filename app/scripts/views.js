@@ -1,32 +1,6 @@
 define(['backbone', 'app', 'handlebars.runtime'],
 function(backbone, app, Handlebars){
 
-  // Input for searching location
-  app.views.home = Backbone.View.extend({
-    el: '#app-container',
-    template: _.template("<input type='text' class='js-location' value='<%= location %>' placeholder='Enter City or Zip'/> <button class='js-search' button>Search</button>"),
-    events: {
-      "click .js-search": "search"
-    },
-
-    initialize: function(user) {
-      this.model = user;
-    },
-
-    render: function() {
-      data = this.model.toJSON();
-      this.$el.html(this.template(data));
-      return this;
-    },
-
-    search: function(event) {
-      place = this.$el.find('.js-location').val();
-      route = new app.routes()
-      route.navigate('/' + place, {trigger: true});
-    }
-  });
-
-
   app.views.movies = Backbone.View.extend({
     el: '#movies-container',
     events: {
@@ -51,6 +25,7 @@ function(backbone, app, Handlebars){
     },
 
     filterMovies: function() {
+      // TODO: see if this can be done within the model better
       self = this;
       filtered =  _.filter(this.movies.toJSON(), function(movie){
         list = _.compact(_.union(self.user.viewed, self.user.ignore));
@@ -77,6 +52,7 @@ function(backbone, app, Handlebars){
     },
 
     getExtra: function(event) {
+      // TODO: this is really ugly
       event.preventDefault();
 
       var $target = $(event.target),
@@ -84,21 +60,14 @@ function(backbone, app, Handlebars){
           expanded = $target.data('expanded'),
           value = expanded ? 'nowrap':'normal',
           align = expanded ? 'middle':'top',
-          icon = expanded ? '&raquo': '&laquo';
+          icon = expanded ? '&raquo': '&laquo',
+          display = expanded ? 'none': 'block';
 
       $details.find('.movie--snippet').css('white-space', value);
       $details.find('.movie--rating').css('vertical-align', align);
       $details.find('.movie--extra-btn').html(icon);
+      $details.find('.movie--showtime').css({display: display});
       $target.data('expanded', !expanded);
-    }
-  });
-
-
-  app.views.movie = Backbone.View.extend({
-    el: '.movie--extras',
-
-    initialize: function(data) {
-
     }
   });
 

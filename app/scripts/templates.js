@@ -24,7 +24,9 @@ function program1(depth0,data) {
     + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</h3>\n            <a href=\"#\" class=\"movie--extra-btn js-extra\" data-expanded=\"false\">&raquo;</a>\n\n            <div class=\"movie--snippet\">"
     + escapeExpression(((stack1 = (depth0 && depth0.synopsis)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</div>\n            <div class=\"movie--extras\"></div>\n          </div>\n        </div>\n\n        <div class=\"movie--options\">\n          <a href=\"#\" class=\"button js-viewed\">Seen It</a>\n          <a href=\"#\" class=\"button js-ignore\">Not Interested</a>\n        </div>\n\n      </div>\n    </li>\n  ";
+    + "</div>\n            <div class=\"movie--showtime\">\n              <a href=\"http://imdb.com/showtimes/title/tt"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.alternate_ids)),stack1 == null || stack1 === false ? stack1 : stack1.imdb)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\">Get Showtimes</a>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"movie--options\">\n          <a href=\"#\" class=\"button js-viewed\">Seen It</a>\n          <a href=\"#\" class=\"button js-ignore\">Not Interested</a>\n        </div>\n\n      </div>\n    </li>\n  ";
   return buffer;
   }
 

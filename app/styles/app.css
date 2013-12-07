@@ -5,6 +5,11 @@
   right: 0px;
   bottom: 0px; }
 
+#movies-container:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 * {
   box-sizing: border-box; }
 
@@ -25,6 +30,9 @@ h3 {
   padding: 15px;
   text-align: center;
   color: white; }
+
+#movies-container {
+  margin-top: 30px; }
 
 #trailer-container {
   display: none;
@@ -115,7 +123,18 @@ h3 {
   right: 24px;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
+
+.movie--showtime {
+  display: none;
+  margin-top: 5px; }
+  .movie--showtime a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #FF4040; }
+    .movie--showtime a:hover {
+      color: #ff3d3d; }
 
 .movie--options {
   background: #353e43;

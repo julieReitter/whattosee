@@ -21,6 +21,14 @@ $options--height: 50px;
   bottom: 0px;
 }
 
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,6 +53,11 @@ h3 {
   padding: 15px;
   text-align: center;
   color: white;
+}
+
+#movies-container {
+  @extend %clearfix;
+  margin-top: 30px;
 }
 
 #trailer-container {
@@ -159,6 +172,23 @@ h3 {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   text-decoration: none;
+  color: black;
+}
+
+.movie--showtime {
+  display: none;
+  margin-top: 5px;
+
+  a  {
+    text-decoration: none;
+    font-size: 14px;
+    color: #FF4040;
+
+    &:hover {
+      color: darken(#FF4040, .5);
+    }
+  }
+
 }
 
 .movie--options {
