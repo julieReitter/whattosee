@@ -1,0 +1,33 @@
+<div class="movie" data-id="{{this.id}}">
+
+    <div class="movie--image">
+      <a href="{{this.links.clips}}" class="js-trailer" data-trailer="{{this.title}}">
+        <img src="{{this.posters.original}}" width="530"/>
+      </a>
+    </div>
+
+    <div class="movie--details">
+      <div class="movie--rating critics">
+        {{this.ratings.critics_score}}
+      </div>
+      <div class="movie--rating audience">
+        {{this.ratings.critics_score}}
+      </div>
+
+      <div class="movie--info">
+        <h3 class="movie--title">{{this.title}}</h3>
+        <a href="#" class="movie--extra-btn js-extra" data-expanded="false">&raquo;</a>
+
+        <div class="movie--snippet">{{this.synopsis}}</div>
+        <div class="movie--showtime">
+          <a href="http://imdb.com/showtimes/title/tt{{this.alternate_ids.imdb}}" target="_blank">Get Showtimes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie--options">
+      <a href="#" class="button js-viewed">Seen It</a>
+      <a href="#" class="button js-ignore">Not Interested</a>
+    </div>
+
+</div>

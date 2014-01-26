@@ -15,6 +15,9 @@ handlers:
 - url: /app/scripts
   static_dir: app/scripts
 
+- url: /app/components
+  static_dir: app/components
+
 - url: .*
   script: main.app
 
