@@ -27,7 +27,7 @@ define([
           event.preventDefault();
           id = $(event.target).closest('.movie').data('id');
           this.model.store(prop, 'id');
-          this.render();
+          this.remove();
         },
 
         setViewed: function() { this.addToStorage('viewed'); },
