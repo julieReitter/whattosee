@@ -1,7 +1,8 @@
 define([
     'chaplin',
+    'helpers',
     'views/MovieView',
-], function(Chaplin, MovieView){
+], function(Chaplin, helpers, MovieView){
 
     var MovieCollectionView = Chaplin.CollectionView.extend({
         container: '#movies-container',
@@ -11,13 +12,8 @@ define([
         itemView: MovieView,
         autoRender: true,
 
-        initialize: function(options) {
-            this.user = options.user;
-            Chaplin.CollectionView.prototype.initialize.apply(this, options);
-        },
-
         filterer: function(item, index) {
-            var list = _.compact(_.union(this.user.viewed, this.user.ignore));
+            var list = _.compact(_.union(helpers.session.user.viewed, helpers.session.user.ignore));
             return !_.contains(list, item.get('id'));
         }
     });

@@ -1,7 +1,8 @@
 define([
     'chaplin',
     'handlebars.runtime',
-], function(Chaplin, Handlebars){
+    'views/TrailerView'
+], function(Chaplin, Handlebars, TrailerView){
 
     var MovieView = Chaplin.View.extend({
 
@@ -35,7 +36,7 @@ define([
         getTrailer: function(event) {
           event.preventDefault();
           var name = $(event.target).closest('.js-trailer').data('trailer');
-          new app.views.trailer({title: name});
+          new TrailerView({title: name});
         },
 
         getExtra: function(event) {

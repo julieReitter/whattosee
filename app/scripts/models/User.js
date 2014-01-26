@@ -1,6 +1,6 @@
 define(['chaplin', 'helpers'], function(Chaplin, helpers){
 
-  var User = Chaplin.Collection.extend({
+  var User = Chaplin.Model.extend({
     defaults: {
       location: undefined
     },

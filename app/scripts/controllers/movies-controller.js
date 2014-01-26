@@ -7,13 +7,12 @@ define([
 
     var MoviesController = Chaplin.Controller.extend({
         index: function() {
-            var user, movies, view;
-            user = new User();
+            var movies, view;
             movies = new Movies();
             movies.fetch({
                 dataType: 'jsonp',
                 success: function(collection, response, options) {
-                    view = new MovieCollectionView({collection: collection, user: user});
+                    view = new MovieCollectionView({collection: collection});
                     view.renderAllItems();
                 }
             });
